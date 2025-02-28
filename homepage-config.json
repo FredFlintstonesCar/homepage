@@ -1,0 +1,79 @@
+{
+  "tasks": {
+    "red": [],
+    "yellow": [],
+    "green": []
+  },
+  "webpages": [
+    {
+      "name": "mail google",
+      "url": "https://mail.google.com/",
+      "image": "screenshots/pemail.jpg",
+      "clicks": 0
+    },
+    {
+      "name": "x.com/spacex",
+      "url": "https://x.com/spacex",
+      "image": "screenshots/x.com.jpeg",
+      "clicks": 0
+    },
+    {
+      "name": "www.jobserve.com",
+      "url": "https://www.jobserve.com/gb/en/can/home",
+      "image": "screenshots/jobs.jpeg",
+      "clicks": 0
+    },
+    {
+      "name": "account.proton.me/mail",
+      "url": "https://account.proton.me/mail",
+      "image": "screenshots/prot.jpeg",
+      "clicks": 0
+    },
+    {
+      "name": "www.leboncoin.fr/",
+      "url": "https://www.leboncoin.fr/",
+      "image": "screenshots/lebon.jpeg",
+      "clicks": 0
+    },
+    {
+      "name": "translate.google.co.uk",
+      "url": "https://translate.google.co.uk/?sl=fr&tl=en&op=translate",
+      "image": "screenshots/translate.jpeg",
+      "clicks": 0
+    },
+    {
+      "name": "speed.cloudflare.com",
+      "url": "http://speed.cloudflare.com",
+      "image": "screenshots/speed.jpeg",
+      "clicks": 0
+    },
+    {
+      "name": "www.dnsleaktest.com/",
+      "url": "https://www.dnsleaktest.com/",
+      "image": "screenshots/dnsleak.jpeg",
+      "clicks": 0
+    },
+    {
+      "name": "Image Reducer",
+      "url": "https://image.pi7.org/reduce-image-size-in-kb",
+      "image": "screenshots/imager.jpeg",
+      "clicks": 0
+    },
+    {
+      "name": "Grok",
+      "url": "https://x.com/i/grok",
+      "image": "screenshots/grok.jpeg",
+      "clicks": 0
+    }
+  ],
+  "clickCounts": {
+    "https://www.jobserve.com/gb/en/can/home": 0,
+    "https://x.com/spacex": 0,
+    "https://account.proton.me/mail": 0,
+    "https://mail.google.com/": 0,
+    "https://www.leboncoin.fr/": 0,
+    "https://translate.google.co.uk/?sl=fr&tl=en&op=translate": 0,
+    "https://image.pi7.org/reduce-image-size-in-kb": 0,
+    "https://x.com/i/grok": 0
+  }
+}

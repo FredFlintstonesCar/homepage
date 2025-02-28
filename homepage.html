@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="urls.js"></script>
+</head>
+<body>
+    <div class="main-container">
+        <div class="todo-section">
+            <div class="todo-header">
+                <button id="todo-toggle" class="todo-toggle">
+                    <span class="toggle-icon">▼</span>
+                    <span class="toggle-text">To Do</span>
+                </button>
+                <div class="task-input-container">
+                    <div class="task-color-picker">
+                        <div class="color-option" data-color="red" style="background: rgba(247, 115, 115, 0.7);"></div>
+                        <div class="color-option" data-color="yellow" style="background: rgba(235, 235, 88, 0.7);"></div>
+                        <div class="color-option selected" data-color="green" style="background: rgba(115, 237, 115, 0.7);"></div>            
+                    </div>
+                    <input type="text" id="todo-input" placeholder="Add a to do...">
+                    <button id="add-button" onclick="addTask()">Add</button>
+                </div>
+                <div class="todo-actions">
+                    <button id="export-button" onclick="exportTasks()">Export</button>
+                    <input type="file" id="import-file" accept=".json" style="display: none;" onchange="importTasks(event)">
+                    <button id="import-button" onclick="document.getElementById('import-file').click()">Import</button>
+                </div>
+            </div>
+            <div id="todo-content">
+                <div class="task-group-container">
+                    <div class="task-group" data-color="red" id="red-tasks">
+                    </div>
+                    <div class="task-group" data-color="yellow" id="yellow-tasks">
+                    </div>
+                    <div class="task-group" data-color="green" id="green-tasks">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-container"></div>
+    </div>
+</body>
+</html>
