@@ -1,0 +1,456 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #0f1012ee;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 1600px;
+    padding: 5px;
+    /* box-sizing: border-box; */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 0;
+    row-gap: 0;
+    margin-top: 2px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.icon-container {
+    text-align: center;
+    cursor: grab;
+    transition: transform 0.2s;
+    padding: 6px;
+    margin: 0;
+    line-height: 0;
+}
+
+.icon-container a {
+    display: block;
+    text-decoration: none;
+    line-height: 0;
+}
+
+.icon {
+    width: 100%;
+    height: 180px;
+    border-radius: 1px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    object-fit: cover;
+    margin: 0;
+    display: block;
+    vertical-align: bottom;
+}
+
+.link-text {
+    font-size: 13px;
+    color: #808591;
+    margin: 0;
+    padding: 4px 4px 2px 4px;
+    text-align: center;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.2;
+    display: block;
+}
+
+.icon-container:hover {
+    transform: translateY(-3px);
+}
+
+.icon-container:hover .link-text {
+    color: #a0a7b7;
+}
+
+/* Media Queries for responsive grid */
+@media (max-width: 1400px) {
+    .grid-container {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    }
+    .icon {
+        height: 160px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .grid-container {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+    .icon {
+        height: 160px;
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    }
+    .icon {
+        height: 160px;
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-container {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    }
+    .icon {
+        height: 160px;
+    }
+    .link-text {
+        font-size: 12px;
+    }
+}
+
+.todo-container {
+    width: 60%;
+    background: rgba(30, 30, 30, 0.5);
+    padding: 2px 3px;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    color: white;
+    margin: 0 auto 5px auto;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.todo-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 3px;
+    flex-wrap: wrap;
+}
+
+.task-input-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+    min-width: 200px;
+}
+
+#todo-input {
+    flex: 1;
+    min-width: 150px;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 13px;
+}
+
+#todo-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+#add-button {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    font-size: 13px;
+}
+
+#add-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.todo-actions {
+    display: flex;
+    gap: 6px;
+}
+
+.todo-actions button {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.todo-actions button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.task-color-picker {
+    display: flex;
+    gap: 4px;
+}
+
+.color-option {
+    width: 20px;
+    height: 20px;
+    border-radius: 30%;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.2s;
+}
+
+.color-option:hover, .color-option.selected {
+    opacity: 1;
+}
+
+#todo-input {
+    width: 90%;
+    padding: 4px 5px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    min-width: 0;
+}
+
+#todo-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+#add-button {
+    padding: 6px 12px;
+    background: #0d3d8a;
+    color: rgba(255, 255, 255, 0.688);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+#add-button:hover {
+    background: #082b63;
+}
+
+.task-color-picker {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    order: -1;
+}
+
+.task-color-picker div {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.task-color-picker div.selected {
+    border: 2px solid white;
+}
+
+.task-group-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    width: 95%;
+    margin: 5px auto;
+    padding: 5px;
+    background: rgba(30, 30, 30, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.task-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 50px;
+    align-items: stretch;
+    background: rgba(40, 40, 40, 0.5);
+    padding: 10px;
+    border-radius: 8px;
+    gap: 6px;
+}
+
+.task-group h3 {
+    margin: 0;
+    padding: 0;
+    color: #a0a0a0;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.task-group:empty {
+    display: none;
+}
+
+.task-group li {
+    list-style: none;
+    padding: 4px 8px;
+    margin: 2px 0;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    font-size: 13px;
+    transition: transform 0.2s;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.task-group li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    border-radius: 3px 0 0 3px;
+}
+
+.task-group li[data-color='red']::before {
+    background: rgba(247, 115, 115, 0.85);
+}
+
+.task-group li[data-color='yellow']::before {
+    background: rgba(238, 238, 118, 0.85);
+}
+
+.task-group li[data-color='green']::before {
+    background: rgba(115, 237, 115, 0.85);
+}
+
+.task-group li:hover {
+    transform: translateY(-1px);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.task-text {
+    flex-grow: 1;
+    cursor: text;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 13px;
+    outline: none;
+    padding: 0 4px;
+    margin-left: 4px;
+    color: rgba(255, 255, 255, 0.9);
+    min-width: 0;
+}
+
+.task-text:focus {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+}
+
+.task-delete {
+    padding: 0 6px;
+    font-size: 14px;
+    background: transparent;
+    color: rgba(255, 255, 255, 0.5);
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.2s;
+}
+
+.task-delete:hover {
+    color: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+}
+
+.todo-actions {
+    display: flex;
+    gap: 6px;
+}
+
+#export-button,
+#import-button {
+    padding: 6px 10px;
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.688);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 12px;
+    white-space: nowrap;
+    transition: all 0.2s;
+}
+
+#export-button:hover,
+#import-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.todo-section {
+    margin-bottom: 5px;
+}
+
+.todo-toggle {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 3px;
+    padding: 6px 6px;
+    cursor: pointer;
+    font-size: 13px;
+    margin-bottom: 3px;
+    transition: all 0.2s;
+}
+
+.todo-toggle:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.todo-toggle .toggle-icon {
+    transition: transform 0.3s ease-out;
+    display: inline-block;
+}
+
+.todo-toggle.collapsed .toggle-icon {
+    transform: rotate(-90deg);
+}
+
+#todo-content {
+    max-height: 2000px;
+    opacity: 1;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+#todo-content.animate-enabled {
+    transition: max-height 0.3s ease-out, opacity 0.2s ease-out, margin 0.3s ease-out;
+}
+
+#todo-content.collapsed {
+    max-height: 0;
+    opacity: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.click-count {
+    display: none;
+}
